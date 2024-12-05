@@ -1,0 +1,25 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&family=Libre+Franklin:ital,wght@0,300;0,600;1,300;1,600&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .vcontainer {
+    @apply px-4 w-full mx-auto;
+    max-width: 1232px;
+  }
+}
+.vtransition {
+  transition: all 0.2s ease-in-out;
+}
+.vtransition-300 {
+  transition: all 0.3s ease-in-out;
+}
+
+@tailwind utilities;
+
+nav .active .active-border {
+  @apply border-white border-b;
+}

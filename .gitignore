@@ -1,0 +1,6 @@
+.DS_Store
+LICENSE
+
+node_modules/
+assets/image/static/*
+assets/image/dummy/*
