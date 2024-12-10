@@ -1,5 +1,5 @@
 <?php $sections = get_field('client') ?>
-<section id="client" class="py-10">
+<section id="client-section" class="py-10">
   <div class="vcontainer">
     <h2 class="text-5xl md:text-6.5xl font-light text-main">Our clients</h2>
   </div>
@@ -11,8 +11,10 @@
         <div>
           <img 
             src="<?php echo wp_get_attachment_image_src($id, 'mjt_client')[0]; ?>"
+            srcset="<?php echo wp_get_attachment_image_src($id, 'mjt_client@2x')[0] ?> 2x"
             alt="client"
             class="mx-auto"
+            style="width: 225px; height: 100px;"
           >
         </div>
       <?php endforeach ?>
@@ -23,9 +25,11 @@
       <?php foreach($sections['top'] as $key => $id): ?>
         <div>
           <img 
-            src="<?php echo wp_get_attachment_image_src($id, 'mjt_client')[0]; ?>"
+            src="<?php echo wp_get_attachment_image_src($id, 'mjt_client')[0] ?>"
+            srcset="<?php echo wp_get_attachment_image_src($id, 'mjt_client@2x')[0] ?> 2x"
             alt="client"
             class="mx-auto"
+            style="width: 225px; height: 100px;"
           >
         </div>
       <?php endforeach ?>

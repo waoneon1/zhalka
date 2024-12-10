@@ -16,8 +16,8 @@ module.exports = {
         secondary: "#72FFC6",
         blck: "#131313",
         blck2: "#333333",
-        gry: "#FCFBFB",
-        gry2: "#F5F4F2",
+        gry: "#EDEFF1",
+        gry2: "#616361",
         gry3: "#F8F8F8",
         grn: "#12784A",
 
@@ -54,9 +54,10 @@ module.exports = {
       fontSize: {
         "3.5xl": ["2rem", "40px"],
         "6.5xl": ["4rem", "1.2"],
-        "8.5xl": ["6.25rem", "110px"],
+        "8.5xl": ["6.25rem", "110px"], //100px
       },
       width: {
+        15: "3.75rem",
         150: "150px",
         200: "200px",
         264: "264px",

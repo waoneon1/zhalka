@@ -4,7 +4,7 @@
     <?php $top_nav = get_field('top_nav', 'option') ?>
     <?php $bot_nav = get_field('bot_nav', 'option') ?>
 
-    <header class="flex items-center justify-between px-5 md:px-7 pt-5 pb-3 md:py-4 bg-white text-black z-40 relative">
+    <header class="vcontainer flex items-center justify-between px-5 md:px-7 pt-5 pb-3 md:py-4 bg-white text-black z-40 relative">
       <!-- Logo and Tagline -->
       <div class="flex items-center space-x-4">
         <img src="<?php echo $bot_nav['zhalka_section']['logo']['url'] ?>" alt="ZHALKA Logo" class="h-6 md:h-12"> <!-- Replace with your logo URL -->

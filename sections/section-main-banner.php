@@ -1,5 +1,5 @@
 <?php $sections = get_field('banner') ?>
-<section id="banner" class="" >
+<section id="hero-section" class="" >
   <!-- Desktop -->
   <div class="<?php echo count($sections) > 1 ? 'js-heroslider' : '' ?> arrow-location-tab">
     <?php foreach($sections as $key => $item): ?>

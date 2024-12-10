@@ -1,8 +1,9 @@
 
 <?php $top_nav = get_field('top_nav', 'option') ?>
 <?php $bot_nav = get_field('bot_nav', 'option') ?>
-<footer class="bg-white border-t border-black text-black text-sm">
-  <div class="pt-10 pb-7 md:py-10 px-5">
+<footer class="bg-white text-black text-sm">
+  <div class="pt-10 pb-7 vcontainer"> 
+    <!-- pt-10 pb-7 md:py-10 px-5 -->
     <div class="flex flex-col md:flex-row items-center md:items-start">
       <!-- Logo and Follow Us -->
       <div class="w-full md:w-1/3 flex flex-col items-start md:items-center text-left">
@@ -12,9 +13,12 @@
           class="mb-10 md:mb-5 align-center h-6 md:h-auto"
         />
         <nav class="hidden md:flex flex-wrap text-black gap-2.5 max-w-64 justify-center">
-          <?php foreach ($top_nav as $key => $item): ?>
-            <a href="<?php echo $item['link'] ?>" class="py-2.5 hover:underline"><?php echo $item['title'] ?></a>
-          <?php endforeach ?>
+          <div class="w-1/2">
+            Follow Us
+          </div>
+          <div class="w-1/2">
+            
+          </div>
         </nav>
       </div>
 
@@ -45,7 +49,8 @@
       </div>
     </div>
   </div>
-  <div class="pt-5 pb-5 md:pb-10">
+
+  <div class="pt-5 pb-5 md:pb-10 vcontainer">
     <div class="flex flex-col items-center">
       <a
         href="#"
@@ -57,7 +62,8 @@
       </a>
     </div>
   </div>
-  <div class="pb-5">
+
+  <div class="pb-5 vcontainer">
     <div class="px-4">
       <?php if ($bot_nav['seo']['title']): ?>
         <h3 class="font-bold text-base"><?php echo $bot_nav['seo']['title'] ?></h3>

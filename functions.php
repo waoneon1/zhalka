@@ -106,11 +106,12 @@ add_action( 'after_setup_theme', 'mjt_setup' );
  */
 if ( ! function_exists( 'mjt_add_image_size' ) ) :
 	function mjt_add_image_size() {
-	  // Nav
-    add_image_size( 'mjt_nav', 268, 176, true );
-    add_image_size( 'mjt_nav@2x', 536, 352, true );
 
     add_image_size( 'mjt_client', 225, 100, true );
+    add_image_size( 'mjt_client@2x', 450, 200, true );
+
+    add_image_size( 'mjt_project', 454, 480, true );
+    add_image_size( 'mjt_project@2x', 908, 960, true );
 
 	}
 endif;

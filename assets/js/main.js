@@ -138,6 +138,39 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  // TAB ===================================================
+  // =======================================================
+  $(".tab-navs").on("click", "li.tab-li", function (e) {
+    e.preventDefault();
+
+    var id = $(this).find("a").attr("href").replace("#", "");
+    var currentActive = $(".tab-navs").find(".active");
+    var currentID = currentActive.find("a").attr("href").replace("#", "");
+
+    currentActive.removeClass("active");
+    $(".tab-content").hide();
+    $(this).addClass("active");
+
+    if (window.innerWidth > 768) {
+      $("#tabload").show();
+    } else {
+      $("#tabload-m").show();
+    }
+
+    setTimeout(() => {
+      if (window.innerWidth > 768) {
+        $("#tabload").hide();
+      } else {
+        $("#tabload-m").hide();
+      }
+
+      $(`#${id}`).fadeIn(200);
+      // $(".js-menu-" + id).slick("slickGoTo", 0);
+      // $(".js-menu-" + id)[0].slick.refresh();
+    }, 200);
+    //}
+  });
+
   function resetNavState() {}
 
   // SLICK =========================================
@@ -171,7 +204,7 @@ jQuery(document).ready(function ($) {
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 0,
     touchThreshold: 30,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -181,6 +214,8 @@ jQuery(document).ready(function ($) {
     draggable: false,     // Prevent dragging with the mouse
     swipe: false,         // Disable swipe gestures on touch devices
     touchMove: false, 
+    cssEase: 'linear', 
+    speed: 10000, 
     responsive: [
       {
         breakpoint: 767,
@@ -194,6 +229,27 @@ jQuery(document).ready(function ($) {
   $(".js-client-reverse").slick({
     ...js_client,
     rtl: true,
+  });
+
+  /* Project */
+  $(".js-project").slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    touchThreshold: 30,
+    arrows: true,        // Hide navigation arrows
+    dots: false,          // Disable dots navigation
+    prevArrow: $('.projarr-left'),
+    nextArrow: $('.projarr-right'),
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 });
 
