@@ -11,32 +11,94 @@
     </div>
   </div>
 
-  <div class="px-5">
-  	 <div class="js-project">
-      <?php foreach($sections as $key => $item): ?>
-      	<div>
-	        <div class="flex relative group">
-	        	<div>
-	        		<img 
-		            src="<?php echo wp_get_attachment_image_src($item['image'], 'full')[0]; ?>"
-		            alt="project"
-		            class="rounded-2.5xl"
-		          >
+  <div class="px-4">
+		<div class="state-project-init overflow-x-auto pb-4 mx-min4 hide-scrollbar">
+      <div class="flex flex-nowrap gap-2.5 md:gap-5 <?php echo count($sections) <= 1 ? 'justify-center' : '' ?>">
+        <div class="w-2.5 h-2.5 mr-0"></div>
+       	<?php foreach($sections as $key => $item): ?>
+       		<div class="state-scroll-item state-project flex flex-none relative">
+		      	<a href="#project_<?php echo $key ?>" class="state-project-btn max-w-453  flex-none inline-block">
+			        <div class="flex relative bg-no-repeat bg-cover bg-center w-358 h-480 md:w-453 rounded-2.5xl" data-background="<?php echo wp_get_attachment_image_src($item['image'], 'full')[0]; ?>">
+
+			        	<div class="state-project-desc-overlay absolute left-0 flex-none vtransition block md:hidden bg-secondary py-5 rounded-2.5xl">
+			        		<div class="h-full text-xl  px-2.5 relative overflow-y-auto ">
+			        			<button class="state-project-close flex justify-end px-2 w-full">
+			        				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.6673 31.6668L8.33398 29.3335L17.6673 20.0002L8.33398 10.6668L10.6673 8.3335L20.0007 17.6668L29.334 8.3335L31.6673 10.6668L22.334 20.0002L31.6673 29.3335L29.334 31.6668L20.0007 22.3335L10.6673 31.6668Z" fill="#1D1B20"/>
+											</svg>
+			        			</button>
+				        		<div class="flex justify-between mb-5">
+				        			<h4 class="text-xl"><?php echo $item['title'] ?></h4>
+				        		</div>
+				        		<div class="py-2.5 text-base">
+					        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				        		</div>
+				        	</div>
+			        	</div>
+
+			        </div>
+			        <h4 class="mx-auto text-center mt-5 text-2xl"><?php echo $item['title'] ?></h4>
+		        </a>
+		        <div class="state-project-desc max-w-926 flex-none vtransition hidden md:block">
+	        		<div class="h-480 bg-secondary text-xl rounded-2.5xl px-7 py-5 ml-5 relative" style="width: 906px;">
+		        		<div class="flex justify-between mb-5">
+		        			<h4><?php echo $item['title'] ?></h4>
+		        			<button class="state-project-close">
+		        				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#1D1B20"/>
+										</svg>
+		        			</button>
+		        		</div>
+		        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		        	</div>
+		        	<h4 class="mx-auto mt-5 text-2xl"></h4>
 	        	</div>
-	        	<div class="absolute bg-secondary h-full text-xl rounded-2.5xl px-7 py-5 group-hover:opacity-100 opacity-0 vtransition">
-	        		<h4 class="pb-5"><?php echo $item['title'] ?></h4>
-	        		<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	        	</div>
-	        </div>
-	        <h4 class="mx-auto mt-5 text-2xl"><?php echo $item['title'] ?></h4>
-        </div>
-      <?php endforeach ?>
+        	</div>
+	      <?php endforeach ?>
+        <div class="w-2.5 h-2.5 mr-0 pr-0.5"></div>
+      </div>
     </div>
   </div>
 
 </section>
+
+<style type="text/css">
+	.state-project .state-project-desc {
+		width: 0;
+		visibility: hidden;
+		overflow: hidden;
+	}
+	.state-project.active .state-project-desc {
+		width: 926px;
+		visibility: visible;
+		overflow: unset;
+	}
+
+	@media (max-width: 768px) {
+	  .state-project .state-project-desc-overlay {
+			visibility: hidden;
+			opacity: 0;
+		}
+		.state-project.active .state-project-desc-overlay {
+			visibility: visible;
+			opacity: 100;
+			height: 100%;
+		}
+	}
+</style>

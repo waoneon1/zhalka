@@ -1,7 +1,7 @@
 
 <?php $top_nav = get_field('top_nav', 'option') ?>
 <?php $bot_nav = get_field('bot_nav', 'option') ?>
-<footer class="bg-white text-black text-sm">
+<footer class="bg-white text-black text-sm" id="footer-section">
   <div class="pt-10 pb-7 vcontainer"> 
     <!-- pt-10 pb-7 md:py-10 px-5 -->
     <div class="flex flex-col md:flex-row items-center md:items-start">
@@ -64,7 +64,7 @@
   </div>
 
   <div class="pb-5 vcontainer">
-    <div class="px-4">
+    <div class="">
       <?php if ($bot_nav['seo']['title']): ?>
         <h3 class="font-bold text-base"><?php echo $bot_nav['seo']['title'] ?></h3>
       <?php endif ?>

@@ -235,6 +235,26 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_6759b84da56e4",
+                            "label": "Company Profile",
+                            "name": "company_profile",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "pdf"
                         }
                     ]
                 },
@@ -358,5 +378,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733075491
+    "modified": 1733935280
 }

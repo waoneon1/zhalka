@@ -9,4 +9,10 @@
 
 <?php include get_template_directory() . "/sections/section-project.php" ?>
 
+<?php include get_template_directory() . "/sections/section-illustration.php" ?>
+
+<?php include get_template_directory() . "/sections/section-board.php" ?>
+
+<?php include get_template_directory() . "/sections/section-contact.php" ?>
+
 <?php get_footer() ?>

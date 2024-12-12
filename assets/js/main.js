@@ -6,28 +6,6 @@ jQuery(document).ready(function ($) {
     });
   }, 100);
 
-  // const scroller = new SmoothScroll({ scrollEase: 0.05 });
-
-  /*
-   * Sticky Header
-   */
-  // var header = document.getElementById("state-header");
-
-  // isSticky();
-  // window.onscroll = function () {
-  //   isSticky();
-  // };
-
-  // function isSticky() {
-  //   //if (window.innerWidth < 769) {
-  //   if (window.pageYOffset > 10) {
-  //     header.classList.add("state-sticky");
-  //   } else {
-  //     header.classList.remove("state-sticky");
-  //   }
-  //   //}
-  // }
-
   // Scroll To Top
   $(".scroll-to-top, .scroll-to-top-sidebar").on("click", function (e) {
     e.preventDefault();
@@ -109,9 +87,6 @@ jQuery(document).ready(function ($) {
    * Burger
    */
 
-  // $(".state-nav-toscroll li a").on("click", function (e) {
-
-  // });
   $(".nav-icon3, .state-nav-mobile-close, .state-nav-toscroll li a").click(
     function () {
       $(".state-nav-mobile").toggleClass("active");
@@ -171,7 +146,90 @@ jQuery(document).ready(function ($) {
     //}
   });
 
-  function resetNavState() {}
+  // SCROLL NEAR =========================================
+  // ===============================================
+  // PROJECT =============================================
+  $('.projarr-left').on('click', function () {
+    scrollToNearest('.state-project-init','left');
+  });
+  $('.projarr-right').on('click', function () {
+    scrollToNearest('.state-project-init', 'right');
+  });
+  $(".state-project-btn, .state-project-close").on("click", function (e) {
+    e.preventDefault();
+    const isSelfClick = $(this).closest('.state-scroll-item').hasClass('active');
+    const isMobile = $(e.target).closest('.state-project-desc-overlay').length
+
+    if (!isMobile) {
+      !isSelfClick && $('.state-scroll-item').removeClass('active');
+      $(this).closest('.state-scroll-item').toggleClass('active');
+    } else {
+      $('.state-scroll-item').removeClass('active');
+    }
+    
+  }); 
+
+  // BOARD
+  $('.board-arrow-left').on('click', function () {
+    scrollToNearest('.state-board-init','left', 10, (272 + 60));
+  });
+  $('.board-arrow-right').on('click', function () {
+    scrollToNearest('.state-board-init','right', 10, 272);
+  });
+
+  function scrollToNearest(containerSelector, direction, leftSpace = 20, leftContainer = 0) {
+    console.log('scrollToNearest')
+    const $scrollContainer = $(containerSelector);
+    const currentScroll = $scrollContainer.scrollLeft();
+    const projects = $scrollContainer.find('.state-scroll-item');
+    let targetScroll = currentScroll;
+     console.log(targetScroll, 'targetScroll awal')
+
+    if (direction === 'left') {
+      // Find the closest project to the left
+      projects.each(function () {
+        const $project = $(this);
+        const projectLeft = $project.position().left + currentScroll - leftContainer;
+
+       
+        if (projectLeft < currentScroll) {
+          targetScroll = projectLeft - leftSpace;
+        }
+         //console.log(projectLeft, currentScroll, 'xx')
+      });
+    } else if (direction === 'right') {
+      // Find the closest project to the right
+      let found = false;
+      projects.each(function () {
+        const $project = $(this);
+        const projectLeft = $project.position().left + currentScroll - leftContainer;
+
+        console.log(projectLeft, 'projectLeft')
+
+        // Scroll to the next project that is fully visible
+        if (projectLeft > (currentScroll+leftSpace) && !found) {
+
+          targetScroll = projectLeft - leftSpace;
+          found = true; // Stop at the first matching project
+        }
+      });
+    }
+
+    
+
+    // Ensure targetScroll is not negative
+    targetScroll = Math.max(0, targetScroll);
+
+    // Animate the scroll to the target position
+    console.log(targetScroll, 'scoll')
+    // > 360 ? targetScroll : 0
+    $scrollContainer.animate(
+      {
+        scrollLeft: targetScroll,
+      },
+      300 // Animation duration
+    );
+  }
 
   // SLICK =========================================
   // ===============================================

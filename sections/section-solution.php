@@ -1,14 +1,15 @@
 <?php $sections = get_field('solution') ?>
 
 <section id="solution-section" class="py-10">
-	<div class="vcontainer flex justify-end mb-10">
-    <div class="w-3/5">
-    	<h2 class="text-5xl md:text-6.5xl font-light text-main text-right">We provide solutions that suit your needs</h2>
-    </div>
-  </div>
+	<?php if ($sections['solution']): ?>
+		<div class="vcontainer flex justify-end mb-10">
+	    <div class="w-3/5">
+	    	<h2 class="text-5xl md:text-6.5xl font-light text-main text-right"><?php echo $sections['solution'] ?></h2>
+	    </div>
+	  </div>
+  <?php endif ?>
 
   <div class="vcontainer">
-
     <ul class="tab-navs flex-wrap state-menu mb-3 py-2 md:py-6 flex items-start gap-4 md:gap-4 justify-start z-10 font-light text-xl">
       <?php for ($i=1; $i <= 3; $i++): ?>
         <li class="tab-li px-5 py-1 <?php echo $i == 1 ? 'active' : '' ?>">
@@ -30,8 +31,6 @@
 			</section>
 		<?php endfor ?>
 		<?php include get_template_directory() . "/snippets/loader-review.php"; ?>
-
-
   </div>
 
 </section>
