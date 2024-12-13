@@ -6,9 +6,9 @@
 
     <header class="vcontainer flex items-center justify-between px-5 md:px-7 pt-5 pb-3 md:py-4 bg-white text-black z-40 relative">
       <!-- Logo and Tagline -->
-      <div class="flex items-center space-x-4">
+      <a href="<?php echo home_url() ?>" class="flex items-center space-x-4">
         <img src="<?php echo $bot_nav['zhalka_section']['logo']['url'] ?>" alt="ZHALKA Logo" class="h-6 md:h-12"> <!-- Replace with your logo URL -->
-      </div>
+      </a>
 
       <nav class="hidden md:flex space-x-20 text-xl">
         <?php foreach ($top_nav as $key => $item): ?>

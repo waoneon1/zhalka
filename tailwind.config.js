@@ -4,6 +4,8 @@ module.exports = {
   content: [
     "./footer.php",
     "./header.php",
+    "./single.php",
+    "./page.php",
     "./functions.php",
     "./templates/**/*.{html,js,php}",
     "./sections/**/*.{html,js,php}",
@@ -68,6 +70,7 @@ module.exports = {
         453: "453px",
       },
       height: {
+        70: "280px",
         150: "150px",
         360: "360px",
         375: "375px",
@@ -148,6 +151,38 @@ module.exports = {
             color: "#000",
             fontSize: "1rem",
             fontWeight: 300,
+            p: {
+              margin: "24px auto",
+              fontSize: "0.75rem",
+              fontWeight: 300,
+              lineHeight: "170%",
+            },
+            h1: {
+              fontSize: "4rem", //64px
+              fontWeight: 300,
+              lineHeight: "130%",
+              marginTop: "20px", //88px
+              marginBottom: "10px", //32px
+            },
+            h2: {
+              fontSize: "2.5rem", //40px
+              fontWeight: 300,
+              lineHeight: "130%",
+              marginTop: "20px", //88px
+              marginBottom: "10px", //32px
+            },
+            h3: {
+              fontSize: "1.25rem", //20px
+              fontWeight: 300,
+            },
+            h4: {
+              fontSize: "1.125rem", //18px
+              fontWeight: 300,
+            },
+            h5: {
+              fontSize: "1rem", //16px
+              fontWeight: 300,
+            },
           },
         },
         mobile: {

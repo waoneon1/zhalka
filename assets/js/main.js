@@ -231,6 +231,34 @@ jQuery(document).ready(function ($) {
     );
   }
 
+  
+  // COPY =========================================
+  // ===============================================
+  $(".copyUrlButton").on("click", function (e) {
+    e.preventDefault();
+
+    // Create a temporary input element
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    document.body.appendChild(tempInput);
+
+    // Set the value of the input to the current page URL
+    tempInput.value = window.location.href;
+
+    // Select the input field
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the URL to the clipboard
+    document.execCommand("copy");
+
+    // Remove the temporary input
+    document.body.removeChild(tempInput);
+
+    // Provide feedback to the user
+    $(".js-copied").fadeIn().delay(1000).fadeOut();
+  });
+
   // SLICK =========================================
   // ===============================================
   $(".voila-slider-init").css("display", "block");

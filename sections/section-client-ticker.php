@@ -6,7 +6,7 @@
   <div class="mt-7 flex flex-col gap-7 relative">
     <div class="absolute h-full w-14 bg-white hidden md:block" style="z-index: 1"></div>
 
-    <div class="js-client mb-7 py-3">
+    <div class="js-client md:mb-7 py-3">
       <?php foreach($sections['top'] as $key => $id): ?>
         <div>
           <img 
@@ -21,7 +21,7 @@
     </div>
 
 
-    <div class="js-client-reverse mb-7 py-3">
+    <div class="js-client-reverse md:mb-7 py-3">
       <?php foreach($sections['top'] as $key => $id): ?>
         <div>
           <img 

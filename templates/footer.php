@@ -58,7 +58,7 @@
         title="Back to Top"
       >
         <div class="text-sm">click to back to top</div>
-        <img class="mt-4" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg">
+        <img class="mt-2" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg">
       </a>
     </div>
   </div>

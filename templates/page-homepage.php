@@ -13,6 +13,9 @@
 
 <?php include get_template_directory() . "/sections/section-board.php" ?>
 
+<?php include get_template_directory() . "/sections/section-news.php" ?>
+
 <?php include get_template_directory() . "/sections/section-contact.php" ?>
+
 
 <?php get_footer() ?>

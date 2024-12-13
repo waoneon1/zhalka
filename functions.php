@@ -113,6 +113,8 @@ if ( ! function_exists( 'mjt_add_image_size' ) ) :
     add_image_size( 'mjt_project', 454, 480, true );
     add_image_size( 'mjt_project@2x', 908, 960, true );
 
+    add_image_size( 'mjt_thumbnail', 600, 600, true);
+
 	}
 endif;
 add_action( 'after_setup_theme', 'mjt_add_image_size' );
