@@ -24,7 +24,7 @@ section {
   -webkit-font-smoothing: antialiased;
 }
 html {
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
   margin-top: 0 !important;
 }
 body {

@@ -1,10 +1,10 @@
 jQuery(document).ready(function ($) {
-  setTimeout(() => {
-    AOS.init({
-      once: true,
-      duration: 1500,
-    });
-  }, 100);
+  // setTimeout(() => {
+  //   AOS.init({
+  //     once: true,
+  //     duration: 1500,
+  //   });
+  // }, 100);
 
   // Scroll To Top
   $(".scroll-to-top, .scroll-to-top-sidebar").on("click", function (e) {

@@ -1343,6 +1343,10 @@ video {
   width: 11rem;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
 .w-9{
   width: 2.25rem;
 }
@@ -1760,6 +1764,10 @@ video {
 
 .pt-6{
   padding-top: 1.5rem;
+}
+
+.pr-2\.5{
+  padding-right: 0.625rem;
 }
 
 .text-left{

@@ -38,7 +38,7 @@ jQuery(document).ready(function ($) {
             url: ajax_posts.ajaxurl,
             data: str,
             beforeSend: function ( xhr ) {
-              $("#js-more-posts").addClass('loading');
+              $("#js-more-posts svg").addClass('animate-spin');
               var skelDiv = ''
               
               for (let i = 0; i < loadmore; i++) {
@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
               var $data = $(data);
               calculate_posts($data.length);
 
-              $("#js-more-posts").removeClass('loading');
+              $("#js-more-posts svg").removeClass('animate-spin');
               $('.skel').remove()
               
               let loadedCurrent = $('.js-blogs-data').attr('data-loaded');

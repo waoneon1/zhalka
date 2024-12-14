@@ -12,12 +12,20 @@
           alt="Logo"
           class="mb-10 md:mb-5 align-center h-6 md:h-auto"
         />
-        <nav class="hidden md:flex flex-wrap text-black gap-2.5 max-w-64 justify-center">
-          <div class="w-1/2">
+        <nav class="w-full hidden md:flex text-black gap-2.5 max-w-64 justify-center pt-5">
+          <div class="w-1/2 text-right pr-2.5">
             Follow Us
           </div>
-          <div class="w-1/2">
-            
+          <div class="w-1/2 flex items-center">
+            <?php if (count($bot_nav['zhalka_section']['socmed'])): ?>
+              <?php foreach ($bot_nav['zhalka_section']['socmed'] as $key => $item): ?>
+                <?php if ($item['item']['title'] == 'linkedin'): ?>  
+                  <a href="<?php echo $item['item']['url'] ?>" class="flex-none" target="_blank">
+                    <img class="w-5" src="<?php echo get_template_directory_uri() ?>/assets/image/sos-ln.png">
+                  </a>
+                <?php endif ?>
+              <?php endforeach ?>
+            <?php endif ?>
           </div>
         </nav>
       </div>
@@ -50,7 +58,7 @@
     </div>
   </div>
 
-  <div class="pt-5 pb-5 md:pb-10 vcontainer">
+  <div class="pt-5 pb-5 md:pb-10 vcontainer scroll-to-top">
     <div class="flex flex-col items-center">
       <a
         href="#"
