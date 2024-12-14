@@ -164,6 +164,12 @@ function mjt_scripts() {
 	wp_enqueue_script( 'mjt-aos', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '1.0', true );
 	wp_enqueue_script( 'mjt-js', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
 
+	wp_register_script( 'mjt-func', get_template_directory_uri() . '/assets/vendor/loadmore/ajax-loadmore.js', array(), _S_VERSION, true );
+	wp_localize_script( 'mjt-func', 'ajax_posts', array(
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    'noposts' => __('No older posts found', 'alterrav3'),
+	));
+	wp_enqueue_script( 'mjt-func' );
 }
 add_action( 'wp_enqueue_scripts', 'mjt_scripts' );
 
@@ -198,6 +204,12 @@ require get_template_directory() . '/inc/customizer.php';
  * ACF QUERY CUSTOMIZER
  */
 require get_template_directory() . '/inc/acf-customizer.php';
+
+/**
+ * AJAX
+ */
+require get_template_directory() . '/assets/vendor/loadmore/ajax-loadmore.php';
+
 
 /**
  * POST TYPE
