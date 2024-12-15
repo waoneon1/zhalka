@@ -4,7 +4,7 @@
 	<?php if ($sections['solution']): ?>
 		<div class="vcontainer flex justify-end mb-7 md:mb-10">
 	    <div class="w-full md:w-3/5">
-	    	<h2 class="text-5xl md:text-6.5xl font-light text-main text-right"><?php echo $sections['solution'] ?></h2>
+	    	<h2 class="text-40 md:text-6.5xl font-light text-main text-right"><?php echo $sections['solution'] ?></h2>
 	    </div>
 	  </div>
   <?php endif ?>
@@ -24,8 +24,8 @@
 			<section id="tab<?php echo $i ?>" class="tab-content" <?php echo $i != 1 ? 'style="display:none;"' : ''  ?>>
 				<?php foreach ($sections['item_tab_' . $i] as $key => $item): ?>
 					<div>
-						<h2 class="text-5xl md:text-6.5xl font-light text-black mb-5"><?php echo $item['title'] ?></h2>
-						<div class="text-gry2 pb-5 mb-5 <?php echo count($sections['item_tab_' . $i]) == ($key + 1) ? 'border-b border-black md:border-white' : 'border-b border-black' ?>"><?php echo $item['sub_item'] ?></div>
+						<h2 class="text-40 md:text-6.5xl font-light text-black mb-5"><?php echo $item['title'] ?></h2>
+						<div class="text-gry4 pb-5 mb-5 <?php echo count($sections['item_tab_' . $i]) == ($key + 1) ? 'border-b border-black md:border-white' : 'border-b border-black' ?>"><?php echo $item['sub_item'] ?></div>
 					</div>
 				<?php endforeach ?>
 			</section>

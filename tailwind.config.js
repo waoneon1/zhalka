@@ -21,6 +21,7 @@ module.exports = {
         gry: "#EDEFF1",
         gry2: "#616361",
         gry3: "#F8F8F8",
+        gry4: "#9A9A9A",
         grn: "#12784A",
 
         white1: "#FFFEF9",
@@ -56,8 +57,10 @@ module.exports = {
       fontSize: {
         "3.5xl": ["2rem", "40px"],
         "4.5xl": ["2.5rem", "1.2"],
-        "6.5xl": ["4rem", "1.2"],
+        "6.5xl": ["4rem", "1.2"], // 64
         "8.5xl": ["6.25rem", "110px"], //100px
+        "40": ["40px", "1.2"], 
+        "56": ["56px", "1.2"], 
       },
       width: {
         15: "3.75rem",
@@ -107,6 +110,7 @@ module.exports = {
         21: "5.25rem",
         39: "9.75rem",
         min4: "-1rem",
+         "-15": "-3.75rem",
       },
       padding: {
         15: "3.75rem",

@@ -1,7 +1,7 @@
 <?php $sections = get_field('client') ?>
 <section id="client-section" class="py-10">
   <div class="vcontainer">
-    <h2 class="text-5xl md:text-6.5xl font-light text-main">Our clients</h2>
+    <h2 class="text-40 md:text-6.5xl font-light text-main">Our clients</h2>
   </div>
   <div class="mt-7 flex flex-col gap-7 relative">
     <div class="absolute h-full w-14 bg-white hidden md:block" style="z-index: 1"></div>

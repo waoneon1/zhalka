@@ -1,4 +1,4 @@
-<?php $sections = get_field('illustration') ?>
+	<?php $sections = get_field('illustration') ?>
 
 <?php if (!$sections['hide_content']): ?>
 	<section id="illustration-section">

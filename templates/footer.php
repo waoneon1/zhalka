@@ -6,24 +6,25 @@
     <!-- pt-10 pb-7 md:py-10 px-5 -->
     <div class="flex flex-col md:flex-row items-center md:items-start">
       <!-- Logo and Follow Us -->
-      <div class="w-full md:w-1/3 flex flex-col items-start md:items-center text-left">
+      <div class="w-full md:w-1/3 flex flex-row md:flex-col items-start md:items-center text-left justify-between">
         <img
           src="<?php echo $bot_nav['zhalka_section']['logo']['url'] ?>"
           alt="Logo"
           class="mb-10 md:mb-5 align-center h-6 md:h-auto"
         />
-        <nav class="w-full hidden md:flex text-black gap-2.5 max-w-64 justify-center pt-5">
-          <div class="w-1/2 text-right pr-2.5">
+        <nav class="md:w-full flex text-black gap-2.5 max-w-64 justify-center md:pt-5">
+          <div class="md:w-1/2 text-right md:pr-2.5">
             Follow Us
           </div>
-          <div class="w-1/2 flex items-center">
+          <div class="md:w-1/2 flex items-center">
             <?php if (count($bot_nav['zhalka_section']['socmed'])): ?>
               <?php foreach ($bot_nav['zhalka_section']['socmed'] as $key => $item): ?>
-                <?php if ($item['item']['title'] == 'linkedin'): ?>  
-                  <a href="<?php echo $item['item']['url'] ?>" class="flex-none" target="_blank">
-                    <img class="w-5" src="<?php echo get_template_directory_uri() ?>/assets/image/sos-ln.png">
-                  </a>
-                <?php endif ?>
+                <a href="<?php echo $item['item'] ?>" class="flex-none" target="_blank">
+                  <img 
+                    class="h-5 w-auto" 
+                    src="<?php echo wp_get_attachment_image_src($item['icon'], 'full')[0]; ?>"
+                  >
+                </a>
               <?php endforeach ?>
             <?php endif ?>
           </div>
@@ -38,7 +39,7 @@
         </p>
         <p class="flex gap-x-4 mb-5">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/phone.svg">
-          <span><?php echo $bot_nav['ho_section']['no_tlp']['title'] ?></span>
+          <span><?php echo $bot_nav['ho_section']['no_tlp'] ?></span>
         </p>
         <p class="flex gap-x-4">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/mail.svg">

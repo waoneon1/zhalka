@@ -10,7 +10,7 @@
         <img src="<?php echo $bot_nav['zhalka_section']['logo']['url'] ?>" alt="ZHALKA Logo" class="h-6 md:h-12"> <!-- Replace with your logo URL -->
       </a>
 
-      <nav class="hidden md:flex space-x-20 text-xl">
+      <nav id="navigation" class="hidden md:flex space-x-20 text-xl">
         <?php foreach ($top_nav as $key => $item): ?>
            <a href="<?php echo $item['link'] ?>" class="hover:underline vtransition"><?php echo $item['title'] ?></a>
         <?php endforeach ?>

@@ -16,11 +16,20 @@ jQuery(document).ready(function ($) {
   });
 
   // Show/hide the scroll-to-top button based on scroll position
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 1000) {
-      $(".scroll-to-top-sidebar").addClass("active");
-    } else {
-      $(".scroll-to-top-sidebar").removeClass("active");
+  $('#navigation a').on('click', function (e) {
+    e.preventDefault();
+    
+    let href = $(this).attr('href');
+    let targetId;
+
+    if (href.includes('#')) {
+      targetId = href.split('#')[1];
+    }
+
+    if (targetId && $('#' + targetId).length) {
+      $('html, body').animate({
+        scrollTop: $('#' + targetId).offset().top
+      }, 600); 
     }
   });
 

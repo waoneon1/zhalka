@@ -2,7 +2,7 @@
 
 <section id="board-section" class="py-5 font-light">
 	<div class="vcontainer mb-7">
-    <h2 class="text-5xl md:text-6.5xl font-light text-main">About us</h2>
+    <h2 class="text-40 md:text-6.5xl font-light text-main">About us</h2>
   </div>
 
   <div class="flex">
@@ -27,7 +27,7 @@
 		        </div>
 		       	<?php foreach($sections['boards'] as $key => $item): ?>
 		       		<div class="state-scroll-item flex flex-none relative">
-				      	<div class="flex-none inline-block border border-main rounded-2.5xl p-2.5 bg-white">
+				      	<div class="flex-none inline-block border border-gry rounded-2.5xl p-2.5 bg-white">
 					        <div class="flex relative">
 				        		<img 
 					            src="<?php echo wp_get_attachment_image_src($item['image'], 'full')[0]; ?>"

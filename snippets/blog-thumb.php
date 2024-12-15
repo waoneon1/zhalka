@@ -1,9 +1,11 @@
-<a class="rounded-2.5xl shadow flex flex-col" href="<?php the_permalink() ?>">
- 	<img 
-    class="rounded-t-2.5xl -mb-4"
+<a class="rounded-2.5xl flex flex-col" href="<?php the_permalink() ?>">
+
+ 	<!-- <img 
+    class="rounded-t-2.5xl -mb-15"
     src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'mjt_thumbnail'); ?>"
     alt="<?php the_title() ?>"
-  >
+  > -->
+  <div class="h-70 w-full rounded-t-2.5xl -mb-15 bg-center bg-no-repeat bg-cover" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'mjt_thumbnail'); ?>')"></div>
   <div class="p-4 rounded-2.5xl bg-white h-70 font-light text-lg flex flex-col justify-between">
     <div>
     	<div class="mb-5 mx-auto text-center">

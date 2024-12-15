@@ -2,8 +2,8 @@
 
 <section id="project-section" class="py-8 bg-gry">
 	<div class="vcontainer">
-    <div class="flex justify-between items-center mb-9">
-    	<h2 class="text-5xl md:text-6.5xl font-light text-main">Our projects</h2>
+    <div class="flex justify-between items-center mb-9 gap-x-4">
+    	<h2 class="text-40 md:text-6.5xl font-light text-main">Our projects</h2>
     	<div class="flex gap-2.5">
     		<div class="cursor-pointer"><img class="projarr-left w-15 -rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     		<div class="cursor-pointer"><img class="projarr-right w-15 rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
@@ -28,27 +28,16 @@
 											</svg>
 			        			</button>
 				        		<div class="flex justify-between mb-5">
-				        			<h4 class="text-xl"><?php echo $item['title'] ?></h4>
+				        			<h4 class="text-xl md:text-2xl"><?php echo $item['title'] ?></h4>
 				        		</div>
 				        		<div class="py-2.5 text-base">
-					        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					        		<?php echo $item['description'] ?>
 				        		</div>
 				        	</div>
 			        	</div>
 
 			        </div>
-			        <h4 class="mx-auto text-center mt-5 text-2xl"><?php echo $item['title'] ?></h4>
+			        <h4 class="mx-auto text-center mt-5 text-xl md:text-2xl w-358 md:w-453"><?php echo $item['title'] ?></h4>
 		        </a>
 		        <div class="state-project-desc max-w-926 flex-none vtransition hidden md:block">
 	        		<div class="h-480 bg-secondary text-xl rounded-2.5xl px-7 py-5 ml-5 relative" style="width: 906px;">
@@ -60,14 +49,9 @@
 										</svg>
 		        			</button>
 		        		</div>
-		        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		        		<?php echo $item['description'] ?>
 		        	</div>
-		        	<h4 class="mx-auto mt-5 text-2xl"></h4>
+		        	<h4 class="mx-auto mt-5 text-xl md:text-2xl"></h4>
 	        	</div>
         	</div>
 	      <?php endforeach ?>

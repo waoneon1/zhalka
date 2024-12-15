@@ -50,7 +50,7 @@
                     "label": "Link",
                     "name": "link",
                     "aria-label": "",
-                    "type": "url",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -60,7 +60,10 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_66fe2a3d75278"
                 }
             ]
@@ -139,26 +142,53 @@
                             "layout": "table",
                             "pagination": 0,
                             "min": 0,
-                            "max": 0,
+                            "max": 4,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Sosmed",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
-                                    "key": "field_6734cb61d01f7",
-                                    "label": "",
-                                    "name": "item",
+                                    "key": "field_675ef2c399b5c",
+                                    "label": "Icon",
+                                    "name": "icon",
                                     "aria-label": "",
-                                    "type": "link",
+                                    "type": "image",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array",
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "thumbnail",
+                                    "parent_repeater": "field_6734cb38d01f6"
+                                },
+                                {
+                                    "key": "field_6734cb61d01f7",
+                                    "label": "Url",
+                                    "name": "item",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
                                     "parent_repeater": "field_6734cb38d01f6"
                                 }
                             ]
@@ -206,7 +236,7 @@
                             "label": "No tlp",
                             "name": "no_tlp",
                             "aria-label": "",
-                            "type": "link",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -215,7 +245,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_6734cc0cd01fb",
@@ -378,5 +412,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734148703
+    "modified": 1734277573
 }

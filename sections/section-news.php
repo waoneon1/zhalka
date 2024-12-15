@@ -1,11 +1,11 @@
 
-<section id="project-section" class="pt-10 pb-5 bg-secondary">
+<section id="news-section" class="pt-10 pb-5 bg-secondary">
 	<div class="vcontainer mb-12">
-  	<h2 class="text-5xl md:text-6.5xl font-light text-main">Latest news</h2>
+  	<h2 class="text-40 md:text-6.5xl font-light text-main">Latest news</h2>
   </div>
 
   <div class="vcontainer mx-auto">
-    <div class="blog-list px-2.5">
+    <div class="blog-list md:px-2.5">
   		<?php 
 			  $args = array(
 			    'post_type' => 'post', // Query only posts
