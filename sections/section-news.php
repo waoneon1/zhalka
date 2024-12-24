@@ -5,7 +5,7 @@
   </div>
 
   <div class="vcontainer mx-auto">
-    <div class="blog-list md:px-2.5">
+    <div class="blog-list md:px-2.5" data-aos="fade-up">
   		<?php 
 			  $args = array(
 			    'post_type' => 'post', // Query only posts
@@ -38,7 +38,7 @@
    
     </div>
 
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center mt-10" data-aos="zoom-in">
     	<?php include get_template_directory() . "/snippets/button-loadmore.php"; ?>
     </div>
 

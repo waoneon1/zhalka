@@ -8,7 +8,7 @@
 					<svg class="w-10 h-10 md:w-16 md:h-16" viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g><path d="M19.834 49.0418L48.1673 20.7085M48.1673 20.7085H19.834M48.1673 20.7085V49.0418" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
 					</svg>
-					<div class="text-2xl md:text-4.5xl px-2.5 text-main"><?php echo $section['ho_section']['no_tlp'] ?></div>
+					<div class="text-2xl md:text-4.5xl px-2.5 text-main" data-aos="fade-right"><?php echo $section['ho_section']['no_tlp'] ?></div>
 				</a>
 				
 				<?php if ($section['ho_section']['email']): ?>
@@ -16,7 +16,7 @@
 					<svg class="w-10 h-10 md:w-16 md:h-16" viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g><path d="M19.834 49.0418L48.1673 20.7085M48.1673 20.7085H19.834M48.1673 20.7085V49.0418" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
 					</svg>
-					<div class="text-2xl md:text-4.5xl px-2.5 text-main">inquiries@zhalka.com</div>
+					<div class="text-2xl md:text-4.5xl px-2.5 text-main" data-aos="fade-right">inquiries@zhalka.com</div>
 				</a>
 				<?php endif ?>
 

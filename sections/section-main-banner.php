@@ -12,10 +12,10 @@
       <div class="relative h-screen-minus-header">
         <div class="h-full flex relative  bg-no-repeat bg-cover bg-right md:bg-center rounded-2.5xl" data-background="<?php echo $bg ?>">
           <div class="vcontainer relative flex flex-col justify-between">
-            <div class="grow h-full flex items-start pt-10">
+            <div class="grow h-full flex items-start pt-10" data-aos="fade-right">
               <h1 class="text-56 leading-tight md:text-8.5xl font-light md:px-6 pt-6 pb-14 md:py-6 text-main font-primary "><?php echo $text ?></h1>
             </div>
-            <div class="flex-none w-full flex items-center justify-center md:justify-start pt-10 pb-24">
+            <div class="flex-none w-full flex items-center justify-center md:justify-start pt-10 pb-24" data-aos="fade-right">
               <a class="text-main bg-secondary text-xl md:text-3.5xl px-5 md:px-7 py-1 md:py-3 rounded-full vtransition flex gap-x-5 items-center" href="<?php echo $cta_button['url'] ?>">
                 <span><?php echo $cta_button['text'] ?></span>
                 <img class="w-9" src="<?php echo get_template_directory_uri() ?>/assets/image/arr.svg" alt="arrow">

@@ -9,7 +9,7 @@
 ?>
 <?php get_header() ?>
 
-<section class="border-b-2 border-black">
+<section class="">
    <!-- Featured Image -->
   <?php if (has_post_thumbnail()): ?>
   	<div class="p-5">
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Share Section -->
-    <div class="pt-6 flex justify-center items-center text-black pb-5">
+    <div class="pt-6 flex justify-center items-center text-black pb-8">
       <span class="mr-5 text-sm">Share this article</span>
       <div class="flex space-x-4">
         <!-- Copied -->
@@ -70,5 +70,9 @@
     </div>
   </div>
 </section>
+
+<div class="px-5 pt-2">
+  <div class="w-full bg-black" style="height: 2px"></div>
+</div>
 
 <?php get_footer() ?>

@@ -1,10 +1,10 @@
 jQuery(document).ready(function ($) {
-  // setTimeout(() => {
-  //   AOS.init({
-  //     once: true,
-  //     duration: 1500,
-  //   });
-  // }, 100);
+  setTimeout(() => {
+    AOS.init({
+      once: true,
+      duration: 1500,
+    });
+  }, 100);
 
   // Scroll To Top
   $(".scroll-to-top, .scroll-to-top-sidebar").on("click", function (e) {
@@ -178,14 +178,6 @@ jQuery(document).ready(function ($) {
     
   }); 
 
-  // BOARD
-  $('.board-arrow-left').on('click', function () {
-    scrollToNearest('.state-board-init','left', 10, (272 + 60));
-  });
-  $('.board-arrow-right').on('click', function () {
-    scrollToNearest('.state-board-init','right', 10, 272);
-  });
-
   function scrollToNearest(containerSelector, direction, leftSpace = 20, leftContainer = 0) {
     console.log('scrollToNearest')
     const $scrollContainer = $(containerSelector);
@@ -239,7 +231,6 @@ jQuery(document).ready(function ($) {
       300 // Animation duration
     );
   }
-
   
   // COPY =========================================
   // ===============================================
@@ -301,6 +292,7 @@ jQuery(document).ready(function ($) {
     autoplay: true,
     autoplaySpeed: 0,
     touchThreshold: 30,
+    variableWidth: true,
     pauseOnHover: false,
     pauseOnFocus: false,
     centerMode: true,
@@ -315,7 +307,7 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1,
+            variableWidth: true,
         },
       },
     ],    // Disable touch move
@@ -326,17 +318,18 @@ jQuery(document).ready(function ($) {
     rtl: true,
   });
 
-  /* Project */
-  $(".js-project").slick({
+  /* Board */
+  $(".js-board").slick({
     infinite: false,
+      variableWidth: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
     touchThreshold: 30,
     arrows: true,        // Hide navigation arrows
     dots: false,          // Disable dots navigation
-    prevArrow: $('.projarr-left'),
-    nextArrow: $('.projarr-right'),
+    prevArrow: $('.boardarr-left'),
+    nextArrow: $('.boardarr-right'),
     responsive: [
       {
         breakpoint: 767,
@@ -346,39 +339,9 @@ jQuery(document).ready(function ($) {
       },
     ],
   });
+
+
 });
 
 // CLASS ============================================================
 // ==================================================================
-class SmoothScroll {
-  constructor({ scrollEase = 0.1 }) {
-    this.scrollEase = scrollEase;
-    this.currentScroll = 0;
-    this.targetScroll = 0;
-    this.body = document.body;
-    this.init();
-  }
-
-  init() {
-    this.body.style.height = `${this.body.scrollHeight}px`;
-    window.addEventListener("scroll", () => this.onScroll());
-    this.smoothScroll();
-  }
-
-  onScroll() {
-    this.targetScroll = window.scrollY || document.documentElement.scrollTop;
-  }
-
-  smoothScroll() {
-    const diff = this.targetScroll - this.currentScroll;
-
-    if (Math.abs(diff) > 0.1) {
-      this.currentScroll += diff * this.scrollEase;
-      this.body.style.transform = `translateY(-${this.currentScroll}px)`;
-    } else {
-      this.currentScroll = this.targetScroll; // Snap to the target if close enough
-    }
-
-    requestAnimationFrame(() => this.smoothScroll());
-  }
-}

@@ -157,7 +157,7 @@ module.exports = {
             fontWeight: 300,
             p: {
               margin: "24px auto",
-              fontSize: "0.75rem",
+              fontSize: "1rem",
               fontWeight: 300,
               lineHeight: "170%",
             },
