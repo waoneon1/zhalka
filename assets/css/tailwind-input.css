@@ -7,7 +7,7 @@
 
 @layer components {
   .vcontainer {
-    @apply px-4 w-full mx-auto;
+    @apply px-5 w-full mx-auto;
     max-width: 1232px;
   }
 }

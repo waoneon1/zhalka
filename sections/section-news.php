@@ -1,5 +1,5 @@
 
-<section id="news-section" class="pt-10 pb-5 bg-secondary">
+<section id="news-section" class="pt-7 md:pt-10 pb-5 bg-secondary">
 	<div class="vcontainer mb-12">
   	<h2 class="text-40 md:text-6.5xl font-light text-main">Latest news</h2>
   </div>

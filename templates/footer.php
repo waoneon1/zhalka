@@ -73,7 +73,7 @@
   </div>
 
   <div class="pb-5 vcontainer">
-    <div class="">
+    <div class="text-gry4">
       <?php if ($bot_nav['seo']['title']): ?>
         <h3 class="font-bold text-base"><?php echo $bot_nav['seo']['title'] ?></h3>
       <?php endif ?>

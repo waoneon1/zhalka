@@ -13,7 +13,7 @@
 
   <div class="px-4" data-aos="fade-up">
 		<div class="state-project-init overflow-x-auto overflow-y-hidden pb-4 mx-min4 hide-scrollbar">
-      <div class="flex flex-nowrap gap-2.5 md:gap-5 <?php echo count($sections) <= 1 ? 'justify-center' : '' ?>">
+      <div class="flex flex-nowrap gap-5 <?php echo count($sections) <= 1 ? 'justify-center' : '' ?>">
         <div class="w-2.5 h-2.5 mr-0"></div>
        	<?php foreach($sections as $key => $item): ?>
        		<div class="state-scroll-item state-project flex flex-none relative">

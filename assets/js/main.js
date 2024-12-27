@@ -3,8 +3,12 @@ jQuery(document).ready(function ($) {
     AOS.init({
       once: true,
       duration: 1500,
+      disable: function () {
+        return window.innerWidth < 768;
+      },
     });
   }, 100);
+
 
   // Scroll To Top
   $(".scroll-to-top, .scroll-to-top-sidebar").on("click", function (e) {
@@ -330,6 +334,26 @@ jQuery(document).ready(function ($) {
     dots: false,          // Disable dots navigation
     prevArrow: $('.boardarr-left'),
     nextArrow: $('.boardarr-right'),
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });  
+  $(".js-board-m").slick({
+    infinite: false,
+    variableWidth: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    touchThreshold: 30,
+    arrows: true,        // Hide navigation arrows
+    dots: false,          // Disable dots navigation
+    prevArrow: $('.boardarr-left-m'),
+    nextArrow: $('.boardarr-right-m'),
     responsive: [
       {
         breakpoint: 767,

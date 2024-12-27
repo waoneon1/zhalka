@@ -4,9 +4,13 @@
 	<div class="vcontainer mb-7">
     <div class="flex justify-between items-center mb-9 gap-x-4">
     	<h2 class="text-40 md:text-6.5xl font-light text-main">About us</h2>
-    	<div class="flex gap-2.5">
+    	<div class="gap-2.5 hidden md:flex">
     		<div class="cursor-pointer"><img class="boardarr-left w-15 -rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     		<div class="cursor-pointer"><img class="boardarr-right w-15 rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
+    	</div>
+    	<div class="gap-2.5 flex-none md:hidden">
+    		<div class="cursor-pointer"><img class="boardarr-left-m w-15 -rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
+    		<div class="cursor-pointer"><img class="boardarr-right-m w-15 rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     	</div>
     </div>
   </div>
@@ -36,10 +40,10 @@
       </div>
     </div>
     <!-- MOBILE -->
-     <div class="block md:hidden board-scroll-width pr-2.5">
-			<div class="<?php echo count($sections['boards']) > 1 ? 'js-board' : '' ?>">
+    <div class="block md:hidden board-scroll-width pr-2.5">
+			<div class="<?php echo count($sections['boards']) > 1 ? 'js-board-m' : '' ?>">
 				<div  class="state-board-desc">
-	        <div class="flex flex-col justify-between pl-2.5 pr-2 py-5 w-40 flex-none block h-full">
+	        <div class="flex flex-col justify-between items-center pl-5 py-2.5 w-40 flex-none block h-full">
 	        	<p class="text-lg"><?php echo $sections['description'] ?></p>
 	        	<p class="font-medium text-sm ">Swipe to see our board</p>
 	        </div>
