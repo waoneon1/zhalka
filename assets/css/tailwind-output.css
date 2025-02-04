@@ -1883,6 +1883,11 @@ video {
   color: rgb(238 238 238 / var(--tw-text-opacity));
 }
 
+.text-red-300{
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
+
 .text-secondary{
   --tw-text-opacity: 1;
   color: rgb(114 255 198 / var(--tw-text-opacity));

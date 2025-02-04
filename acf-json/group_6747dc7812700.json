@@ -126,6 +126,25 @@
                         }
                     ],
                     "parent_repeater": "field_6747dc785d7a5"
+                },
+                {
+                    "key": "field_67a17c7b6ed7e",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000055",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "parent_repeater": "field_6747dc785d7a5"
                 }
             ]
         },
@@ -899,5 +918,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733814824
+    "modified": 1738636497
 }

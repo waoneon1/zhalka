@@ -52,7 +52,9 @@
         <h3 class="font-bold text-black mb-3 md:mb-7">Take Part</h3>
         <nav class="mt-2 space-y-2">
           <?php foreach ($bot_nav['part_section'] as $key => $item): ?>
-            <a href="<?php echo $item['nav']['url'] ?>" class="hover:underline block"><?php echo $item['nav']['title'] ?></a>
+            <a href="<?php echo $item['nav']['url'] ?>" class="hover:underline block"
+              target="<?php echo $item['nav']['target'] ?>"
+            ><?php echo $item['nav']['title'] ?></a>
           <?php endforeach ?>
         </nav>
       </div>

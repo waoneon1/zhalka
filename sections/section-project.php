@@ -20,7 +20,7 @@
 		      	<a href="#project_<?php echo $key ?>" class="state-project-btn max-w-453  flex-none inline-block">
 			        <div class="flex relative bg-no-repeat bg-cover bg-center w-358 h-480 md:w-453 rounded-2.5xl" data-background="<?php echo wp_get_attachment_image_src($item['image'], 'full')[0]; ?>">
 
-			        	<div class="state-project-desc-overlay absolute left-0 flex-none vtransition block md:hidden bg-secondary py-5 rounded-2.5xl">
+			        	<div class="state-project-desc-overlay absolute left-0 flex-none vtransition block md:hidden bg-secondary py-5 rounded-2.5xl w-full">
 			        		<div class="h-full text-xl  px-2.5 relative overflow-y-auto ">
 			        			<button class="state-project-close flex justify-end px-2 w-full">
 			        				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

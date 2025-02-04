@@ -8,7 +8,7 @@
     		<div class="cursor-pointer"><img class="boardarr-left w-15 -rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     		<div class="cursor-pointer"><img class="boardarr-right w-15 rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     	</div>
-    	<div class="gap-2.5 flex-none md:hidden">
+    	<div class="gap-2.5 flex-none flex md:hidden">
     		<div class="cursor-pointer"><img class="boardarr-left-m w-15 -rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     		<div class="cursor-pointer"><img class="boardarr-right-m w-15 rotate-90" src="<?php echo get_template_directory_uri() ?>/assets/image/arrow-circle.svg"></div>
     	</div>
