@@ -38,12 +38,19 @@
 
     <script>
       // Toggle mobile menu visibility
-      $('#burgerButton').on('click', function() {
-        $('#mobileMenu').toggleClass('hidden');
-        $('body').toggleClass('active-modal');
-        $(this).find('.state-grid').toggleClass('hidden');
-        $(this).find('.state-close').toggleClass('hidden');
+
+      $(document).ready(function () {
+        
+        $('#burgerButton, #mobileMenu a').on('click', function() {
+          $('#mobileMenu').toggleClass('hidden');
+          $('body').toggleClass('active-modal');
+          $('#burgerButton').find('.state-grid').toggleClass('hidden');
+          $('#burgerButton').find('.state-close').toggleClass('hidden');
+        });
+
       });
+
+     
     </script>
 
       
