@@ -10,7 +10,7 @@
         $cta_button['url'] = $item['cta_button']['url'] ? $item['cta_button']['url'] : '#';
       ?>
       <div class="relative h-screen-minus-header">
-        <div class="h-full flex relative  bg-no-repeat bg-cover bg-right md:bg-center rounded-2.5xl" data-background="<?php echo $bg ?>">
+        <div class="h-full flex relative  bg-no-repeat bg-cover bg-center md:bg-center rounded-2.5xl" data-background="<?php echo $bg ?>">
           <div class="vcontainer relative flex flex-col justify-between">
             <div class="grow h-full flex items-start pt-10" data-aos="fade-right">
               <h1 class="text-56 leading-tight md:text-8.5xl font-light md:px-6 pt-6 pb-14 md:py-6 font-primary" style="color: <?php echo $item['text_color']  ?>">

@@ -29,7 +29,7 @@
         <a href="<?php echo $item['link'] ?>" class="py-2.5 text-5xl font-light"><?php echo $item['title'] ?></a>
       <?php endforeach ?>
       <div>
-        <a class="mt-20 text-main bg-secondary text-2xl md:text-3.5xl px-5 md:px-7 py-1 md:py-3  rounded-full vtransition flex gap-x-5 items-center" href="#">
+        <a class="mt-20 text-main bg-secondary text-2xl md:text-3.5xl px-5 md:px-7 py-1 md:py-3  rounded-full vtransition flex gap-x-5 items-center" href="#contact-section">
           <span>contact us</span>
           <img class="w-9" src="<?php echo get_template_directory_uri() ?>/assets/image/arr.svg" alt="arrow">
         </a>
