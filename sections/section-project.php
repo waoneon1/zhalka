@@ -49,7 +49,9 @@
 										</svg>
 		        			</button>
 		        		</div>
-		        		<?php echo $item['description'] ?>
+                <div class="h-400 overflow-y-auto" >
+						      <?php echo $item['description'] ?>
+                </div>
 		        	</div>
 		        	<h4 class="mx-auto mt-5 text-xl md:text-2xl"></h4>
 	        	</div>
