@@ -275,7 +275,7 @@
                             "label": "Company Profile",
                             "name": "company_profile",
                             "aria-label": "",
-                            "type": "file",
+                            "type": "url",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -284,11 +284,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
-                            "library": "all",
-                            "min_size": "",
-                            "max_size": "",
-                            "mime_types": "pdf"
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ]
                 },
@@ -412,5 +409,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734277573
+    "modified": 1746241584
 }
