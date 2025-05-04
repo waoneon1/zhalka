@@ -22,7 +22,7 @@
 
 
     <div class="js-client-reverse md:mb-7 py-2.5" data-aos="fade-right">
-      <?php foreach($sections['top'] as $key => $id): ?>
+      <?php foreach($sections['bottom'] as $key => $id): ?>
 
           <img 
             src="<?php echo wp_get_attachment_image_src($id, 'mjt_client')[0] ?>"
