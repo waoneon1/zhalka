@@ -56,7 +56,7 @@
                     "name": "mobile_image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "360 x 660 px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -944,5 +944,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746241398
+    "modified": 1746329077
 }
